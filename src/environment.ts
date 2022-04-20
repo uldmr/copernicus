@@ -1,31 +1,38 @@
 import { Scene } from 'three';
 
 import { Camera } from './camera';
-import { ControlsRenderer, MainRenderer } from './renderers';
+import { BloomRenderer, ControlsRenderer, MainRenderer, IBaseRenderer } from './renderers';
 
 export class Environment {
-  private _renderer: MainRenderer;
-  private _controlsRenderer: ControlsRenderer;
   private _camera: Camera;
+  private _scene: Scene;
+  private _renderers: IBaseRenderer[] = [];
 
-  constructor() {
-    this._renderer = new MainRenderer();
-    this._controlsRenderer = new ControlsRenderer();
-    this._camera = new Camera(this._controlsRenderer.instance.domElement);
+  constructor(scene: Scene) {
+    const controlsRenderer = new ControlsRenderer();
+    const mainRenderer = new MainRenderer();
+
+    this._scene = scene;
+    this._camera = new Camera(controlsRenderer.instance.domElement);
+
+    const bloomRenderer = new BloomRenderer(mainRenderer.instance, scene, this._camera.instance);
+    this._renderers = [controlsRenderer, mainRenderer, bloomRenderer];
 
     window.addEventListener('resize', this.handleWindowResize);
   }
 
-  public render(scene: Scene) {
-    this._renderer.render(scene, this._camera.instance);
-    this._controlsRenderer.render(scene, this._camera.instance);
+  public render() {
+    this._renderers.forEach((renderer) => {
+      renderer.render(this._scene, this._camera.instance);
+    });
   }
 
   // private methods
 
   private handleWindowResize = () => {
     this._camera.update();
-    this._renderer.update();
-    this._controlsRenderer.update();
+    this._renderers.forEach((renderer) => {
+      renderer.update();
+    });
   };
 }

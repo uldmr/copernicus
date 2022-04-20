@@ -1,28 +1,25 @@
-import { Camera, Object3D, Scene, WebGLRenderer } from 'three';
+import { Camera, ReinhardToneMapping, Scene, WebGLRenderer } from 'three';
 
 import { Window } from '../utils';
+import { BaseRenderer } from './base.renderer';
 
-export class MainRenderer {
-  private _renderer: WebGLRenderer;
-
+export class MainRenderer extends BaseRenderer<WebGLRenderer> {
   constructor() {
+    super();
     this._renderer = new WebGLRenderer({
       antialias: true,
     });
     this._renderer.setPixelRatio(Window.dpr);
+    this._renderer.toneMapping = ReinhardToneMapping;
     this.update();
     document.body.appendChild(this._renderer.domElement);
   }
 
-  public get instance() {
-    return this._renderer;
+  public render(scene: Scene, camera: Camera) {
+    this._renderer.render(scene, camera);
   }
 
   public update() {
     this._renderer.setSize(Window.width, Window.height);
-  }
-
-  public render(scene: Scene, camera: Camera) {
-    this._renderer.render(scene, camera);
   }
 }
