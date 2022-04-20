@@ -1,0 +1,28 @@
+{
+  "objects": [
+    {
+      "type": "sun",
+      "name": "Sun",
+      "radius": 10,
+      "color": "0xd14000",
+      "atmosphere": {
+        "color": "0xd14000"
+      },
+      "satellites": [
+        {
+          "type": "planet",
+          "name": "Mercury",
+          "radius": 1,
+          "color": "0x7d827e",
+          "rotationPeriod": 58.646,
+          "orbit": {
+            "e": 0.20563,
+            "aphelion": 20,
+            "perihelion": 20,
+            "period": 87.9691
+          }
+        }
+      ]
+    }
+  ]
+}
