@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { Constants } from './constants';
 
 import { Environment } from './environment';
 
@@ -11,9 +12,9 @@ export class Scene {
   private _tickHandlers: TickHandler[] = [];
 
   constructor() {
-    this._env = new Environment();
     this._scene = new THREE.Scene();
-    this.setBackground();
+    this._env = new Environment(this._scene);
+    this.buildDeepSpace();
   }
 
   public add(...object: THREE.Object3D<THREE.Event>[]) {
@@ -21,6 +22,7 @@ export class Scene {
   }
 
   public run = () => {
+    this._scene.traverse(this.disposeMaterial);
     this.tick();
   };
 
@@ -30,15 +32,15 @@ export class Scene {
 
   // private methods
 
-  private setBackground() {
+  private buildDeepSpace() {
     const cubeTextureLoader = new THREE.CubeTextureLoader();
     this._scene.background = cubeTextureLoader.load([
-      '/textures/stars.jpg',
-      '/textures/stars.jpg',
-      '/textures/stars.jpg',
-      '/textures/stars.jpg',
-      '/textures/stars.jpg',
-      '/textures/stars.jpg',
+      Constants.scene.bg,
+      Constants.scene.bg,
+      Constants.scene.bg,
+      Constants.scene.bg,
+      Constants.scene.bg,
+      Constants.scene.bg,
     ]);
   }
 
@@ -48,6 +50,13 @@ export class Scene {
     this._tickHandlers.forEach((handler) => {
       handler(elapsed);
     });
-    this._env.render(this._scene);
+
+    this._env.render();
   };
+
+  private disposeMaterial(obj: any) {
+    if (obj.material) {
+      obj.material.dispose();
+    }
+  }
 }
