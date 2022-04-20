@@ -1,2 +1,2 @@
-export * from './AstronomicalObject';
-export * from './AstronomicalObjectOrbit';
+export * from './ao';
+export * from './solarSystem';
