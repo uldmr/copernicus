@@ -1,6 +1,10 @@
-import { SolarSystem } from './data/solarSystem';
+import data from './data/solarSystem.json';
+import { SolarSystem } from './models';
 import { Scene } from './scene';
+import { SolarSystemBuilder } from './builders';
 
 const scene = new Scene();
-SolarSystem.build(scene);
+const solarSystem = new SolarSystem(data);
+const builder = new SolarSystemBuilder(scene);
+builder.build(solarSystem);
 scene.run();
