@@ -24,13 +24,14 @@ export class Camera {
   // private methods
 
   private initCamera() {
-    this._cam = new PerspectiveCamera(45, Window.aspect, 0.1, 200);
-    this._cam.position.set(10, 5, 20);
+    this._cam = new PerspectiveCamera(60, Window.aspect, 0.1, 100000);
+    this._cam.position.set(50, 60, 1);
   }
 
   private initControls(domElement?: HTMLElement) {
     this._controls = new OrbitControls(this._cam, domElement);
-    this._controls.minDistance = 5;
-    this._controls.maxDistance = 500;
+    this._controls.zoomSpeed = 1;
+    this._controls.autoRotate = true;
+    this._controls.autoRotateSpeed = 2;
   }
 }
