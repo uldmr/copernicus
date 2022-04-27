@@ -1,4 +1,5 @@
 import { Camera, ReinhardToneMapping, Scene, WebGLRenderer } from 'three';
+import { Constants } from '../constants';
 
 import { Window } from '../utils';
 import { BaseRenderer } from './base.renderer';
@@ -10,7 +11,9 @@ export class MainRenderer extends BaseRenderer<WebGLRenderer> {
       antialias: true,
     });
     this._renderer.setPixelRatio(Window.dpr);
-    this._renderer.toneMapping = ReinhardToneMapping;
+    if (Constants.mode === 'actual') {
+      this._renderer.toneMapping = ReinhardToneMapping;
+    }
     this.update();
     document.body.appendChild(this._renderer.domElement);
   }

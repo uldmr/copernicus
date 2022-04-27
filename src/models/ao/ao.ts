@@ -1,4 +1,6 @@
 import { Constants } from '../../constants';
+import { Converter } from '../../utils';
+import { IParam, Param } from '../param';
 import { Atmosphere, IAtmosphere } from './atmosphere';
 import { IOrbit, Orbit } from './orbit';
 
@@ -18,48 +20,56 @@ export enum AOType {
 /** Astronomical Object */
 export interface IAO {
   /** Type of the object */
-  type: AOType;
+  readonly type: AOType;
 
   /** The common name of the object  */
-  name: string;
+  readonly name: string;
 
-  /** Mean radius of the object (AU) */
-  radius: number;
+  /** Mean radius of the object (Mm) */
+  readonly radius: IParam<number>;
+
+  /** Mean diameter of the object (Mm) */
+  readonly diameter: number;
 
   /** General color of the object */
-  color?: number;
+  readonly color?: number;
 
   /** Sidereal rotation period (Earth days) */
-  rotationPeriod?: number;
+  readonly rotationPeriod?: number;
 
   /** Object's atosphere */
-  atmosphere?: IAtmosphere;
+  readonly atmosphere?: IAtmosphere;
 
   /** Object's orbit */
-  orbit?: IOrbit;
+  readonly orbit?: IOrbit;
 
   /** Object's satellites */
-  satellites?: IAO[];
+  readonly satellites?: IAO[];
 }
 
 export class AO implements IAO {
-  public type: AOType;
-  public name: string;
-  public radius: number;
-  public rotationPeriod?: number;
-  public color?: number;
-  public orbit?: IOrbit;
-  public atmosphere?: IAtmosphere;
-  public satellites?: AO[];
+  public readonly type: AOType;
+  public readonly name: string;
+  public readonly radius: IParam<number>;
+  public readonly diameter: number;
+  public readonly rotationPeriod?: number;
+  public readonly color?: number;
+  public readonly orbit?: IOrbit;
+  public readonly atmosphere?: IAtmosphere;
+  public readonly satellites?: AO[];
 
   constructor(src?: any) {
     this.type = src?.type || AOType.Undefined;
     this.name = src?.name || '';
-    this.radius = src?.radius || 0;
+    this.radius = new Param({
+      actual: Converter.fromMm(src?.radius?.actual || 0),
+      simple: src?.radius?.simple || 0,
+    });
+    this.diameter = this.radius.value * 2;
     this.color = parseInt(src?.color) || Constants.ao.defaultColor;
     this.rotationPeriod = src?.rotationPeriod;
-    this.orbit = new Orbit(src.orbit);
-    this.atmosphere = new Atmosphere(src.atmosphere);
+    this.orbit = src?.orbit ? new Orbit(src.orbit) : null;
+    this.atmosphere = src?.atmosphere ? new Atmosphere(src.atmosphere) : null;
     this.satellites = src?.satellites?.map((o: any) => new AO(o)) || [];
   }
 }

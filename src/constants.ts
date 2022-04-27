@@ -1,5 +1,51 @@
+import * as THREE from 'three';
+
+const Modes = {
+  actual: {
+    mode: 'actual',
+    camera: {
+      defaultPos: {
+        x: 1000,
+        y: 1000,
+        z: 1,
+      },
+      fov: 60,
+      near: 0.1,
+      far: 10000000,
+    },
+    zoom: {
+      min: 0.1,
+    },
+    units: {
+      /** One distance unit presented in Megameters (Mm) */
+      distance: 6.378,
+    },
+  },
+  simple: {
+    mode: 'simple',
+    camera: {
+      defaultPos: {
+        x: 1,
+        y: 100,
+        z: 1,
+      },
+      fov: 60,
+      near: 0.1,
+      far: 10000000,
+    },
+    zoom: {
+      min: 0.1,
+    },
+    units: {
+      /** One distance unit presented in Megameters (Mm) */
+      distance: 6.378,
+    },
+  },
+};
+
 export const Constants = {
   scene: {
+    center: new THREE.Vector3(0, 0, 0),
     bg: '/textures/stars.jpg',
   },
   layers: {
@@ -8,9 +54,8 @@ export const Constants = {
   ao: {
     defaultColor: 0x7d827e,
     orbit: {
-      widthFactor: 50,
       color: 0xffffff,
-      /** Orbital inclination (Degrees) */
+      /** Orbital inclination (deg) */
       inclination: 90,
     },
     atmosphere: {
@@ -18,6 +63,8 @@ export const Constants = {
     },
   },
   sun: {
-    lightPower: 1000,
+    lightPower: 100000000,
   },
+  scaleFactor: 8,
+  ...Modes.simple,
 };

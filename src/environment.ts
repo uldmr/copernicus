@@ -1,6 +1,7 @@
 import { Scene } from 'three';
 
-import { Camera } from './camera';
+import { Camera, CameraChangeHandler } from './camera';
+import { Constants } from './constants';
 import { BloomRenderer, ControlsRenderer, MainRenderer, IBaseRenderer } from './renderers';
 
 export class Environment {
@@ -15,8 +16,12 @@ export class Environment {
     this._scene = scene;
     this._camera = new Camera(controlsRenderer.instance.domElement);
 
-    const bloomRenderer = new BloomRenderer(mainRenderer.instance, scene, this._camera.instance);
-    this._renderers = [controlsRenderer, mainRenderer, bloomRenderer];
+    this._renderers = [controlsRenderer, mainRenderer];
+
+    if (Constants.mode === 'actual') {
+      const bloomRenderer = new BloomRenderer(mainRenderer.instance, scene, this._camera.instance);
+      this._renderers.push(bloomRenderer);
+    }
 
     window.addEventListener('resize', this.handleWindowResize);
   }
@@ -25,6 +30,14 @@ export class Environment {
     this._renderers.forEach((renderer) => {
       renderer.render(this._scene, this._camera.instance);
     });
+  }
+
+  public onCameraChange(handler: CameraChangeHandler) {
+    this._camera.onChange(handler);
+  }
+
+  public get camera() {
+    return this._camera.instance;
   }
 
   // private methods

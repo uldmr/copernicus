@@ -3,23 +3,36 @@
     {
       "type": "sun",
       "name": "Sun",
-      "radius": 10,
-      "color": "0xd14000",
+      "radius": {
+        "actual": 695.7,
+        "simple": 5
+      },
+      "color": "0xFFD300",
       "atmosphere": {
-        "color": "0xd14000"
+        "color": "0xFFD300"
       },
       "satellites": [
         {
           "type": "planet",
           "name": "Mercury",
-          "radius": 1,
+          "radius": {
+            "actual": 2.439,
+            "simple": 1
+          },
           "color": "0x7d827e",
           "rotationPeriod": 58.646,
           "orbit": {
             "e": 0.20563,
-            "aphelion": 20,
-            "perihelion": 20,
-            "period": 87.9691
+            "aphelion": {
+              "actual": 69816.9,
+              "simple": 20
+            },
+            "perihelion": {
+              "actual": 46001.2,
+              "simple": 15
+            },
+            "period": 87.9691,
+            "inclination": 3.38
           }
         }
       ]

@@ -1,11 +1,11 @@
 import { AO, IAO } from './ao/ao';
 
 export interface ISolarSystem {
-  objects: IAO[];
+  readonly objects: IAO[];
 }
 
 export class SolarSystem implements ISolarSystem {
-  public objects: IAO[] = [];
+  public readonly objects: IAO[] = [];
 
   constructor(data?: any) {
     if (data?.objects) {

@@ -104,15 +104,22 @@ export class BloomRenderer extends BaseRenderer<EffectComposer> {
   }
 
   private darkenNonBloomed = (obj: any) => {
-    if (obj.isMesh && this._bloomLayer.test(obj.layers) === false) {
+    if ((obj.isMesh || obj.isLine) && this._bloomLayer.test(obj.layers) === false) {
       this._materials[obj.uuid] = obj.material;
       obj.material = this._darkMaterial;
+      obj.children.forEach((o) => {
+        this._materials[o.uuid] = o.material;
+        o.material = this._darkMaterial;
+      });
     }
   };
 
   private restoreMaterial = (obj: any) => {
     if (this._materials[obj.uuid]) {
       obj.material = this._materials[obj.uuid];
+      obj.children.forEach((o) => {
+        o.material = this._materials[o.uuid];
+      });
       delete this._materials[obj.uuid];
     }
   };

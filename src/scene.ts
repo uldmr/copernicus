@@ -1,6 +1,7 @@
 import * as THREE from 'three';
-import { Constants } from './constants';
 
+import { CameraChangeHandler } from './camera';
+import { Constants } from './constants';
 import { Environment } from './environment';
 
 type TickHandler = (elapsed: number) => void;
@@ -14,6 +15,7 @@ export class Scene {
   constructor() {
     this._scene = new THREE.Scene();
     this._env = new Environment(this._scene);
+
     this.buildDeepSpace();
   }
 
@@ -28,6 +30,14 @@ export class Scene {
 
   public onTick(handler: TickHandler) {
     this._tickHandlers.push(handler);
+  }
+
+  public onCameraChange(handler: CameraChangeHandler) {
+    this._env.onCameraChange(handler);
+  }
+
+  public get camera() {
+    return this._env.camera;
   }
 
   // private methods
