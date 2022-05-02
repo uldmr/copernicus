@@ -9,8 +9,7 @@ export class OrbitBuilder extends BaseBuilder<IOrbit, THREE.Line> {
     const geo = this.getGeometry(o);
     const mat = new THREE.LineBasicMaterial({ color: Constants.ao.orbit.color, side: THREE.DoubleSide });
     const orbit = new THREE.Line(geo, mat);
-    orbit.rotation.set(THREE.MathUtils.degToRad(Constants.ao.orbit.inclination), 0 /*TODO: use o.inclination*/, 0);
-    this.scene.add(orbit);
+    orbit.rotation.set(THREE.MathUtils.degToRad(Constants.ao.orbit.inclination), 0, 0);
     return orbit;
   }
 
