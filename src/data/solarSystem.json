@@ -17,7 +17,7 @@
           "name": "Mercury",
           "radius": {
             "actual": 2.439,
-            "simple": 1
+            "simple": 0.5
           },
           "color": "0x7d827e",
           "rotationPeriod": 58.646,
@@ -29,11 +29,153 @@
             },
             "perihelion": {
               "actual": 46001.2,
-              "simple": 15
+              "simple": 18
             },
             "period": 87.9691,
             "inclination": 3.38
           }
+        },
+        {
+          "type": "planet",
+          "name": "Venus",
+          "radius": {
+            "actual": 6.0518,
+            "simple": 1.3
+          },
+          "color": "0xc18f17",
+          "rotationPeriod": -243.0226,
+          "orbit": {
+            "e": 0.006772,
+            "aphelion": {
+              "actual": 108939.0,
+              "simple": 26
+            },
+            "perihelion": {
+              "actual": 107477.0,
+              "simple": 26
+            },
+            "period": 224.701,
+            "inclination": 3.86
+          }
+        },
+        {
+          "type": "planet",
+          "name": "Earth",
+          "radius": {
+            "actual": 6.371,
+            "simple": 1.5
+          },
+          "color": "0x6b93d6",
+          "rotationPeriod": 0.997269,
+          "orbit": {
+            "e": 0.0167086,
+            "aphelion": {
+              "actual": 152100.0,
+              "simple": 32
+            },
+            "perihelion": {
+              "actual": 147095.0,
+              "simple": 31
+            },
+            "period": 365.256363,
+            "inclination": 7.155
+          },
+          "satellites": [
+            {
+              "type": "moon",
+              "name": "Moon",
+              "radius": {
+                "actual": 1.7374,
+                "simple": 0.3
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 27.321661,
+              "orbit": {
+                "e": 0.0549,
+                "aphelion": {
+                  "actual": 405.4,
+                  "simple": 2.8
+                },
+                "perihelion": {
+                  "actual": 362.6,
+                  "simple": 2.7
+                },
+                "period": 27.321661,
+                "inclination": 5.145
+              }
+            }
+          ]
+        },
+        {
+          "type": "planet",
+          "name": "Mars",
+          "radius": {
+            "actual": 3.3895,
+            "simple": 0.8
+          },
+          "color": "0xc1440e",
+          "rotationPeriod": 1.025957,
+          "orbit": {
+            "e": 0.0934,
+            "aphelion": {
+              "actual": 249200.0,
+              "simple": 40
+            },
+            "perihelion": {
+              "actual": 206700.0,
+              "simple": 38
+            },
+            "period": 686.980,
+            "inclination": 7.155
+          },
+          "satellites": [
+            {
+              "type": "moon",
+              "name": "Phobos",
+              "radius": {
+                "actual": 0.0112667,
+                "simple": 0.1
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.0151,
+                "aphelion": {
+                  "actual": 9.51758,
+                  "simple": 1.7
+                },
+                "perihelion": {
+                  "actual": 9.23442,
+                  "simple": 1.6
+                },
+                "period": 0.31891023,
+                "inclination": 1.093
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Deimos",
+              "radius": {
+                "actual": 0.0062,
+                "simple": 0.09
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.00033,
+                "aphelion": {
+                  "actual": 23.4709,
+                  "simple": 2.1
+                },
+                "perihelion": {
+                  "actual": 23.4555,
+                  "simple": 2.0
+                },
+                "period": 1.263,
+                "inclination": 0.93
+              }
+            }
+          ]
         }
       ]
     }
