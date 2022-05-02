@@ -17,28 +17,38 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
     this._labelBuilder = new LabelBuilder(scene);
   }
 
-  public build(o: IAO) {
+  public build(o: IAO, center?: THREE.Vector3) {
     const group = new THREE.Group();
-    const obj = this.buildAO(o);
+    const obj = this.buildAO(o, center);
     group.add(obj);
 
     if (o.satellites) {
       o.satellites.map((s) => {
-        group.add(this.build(s));
+        group.add(this.build(s, obj.position));
       });
     }
+
     if (o.orbit) {
-      const orbit = this._orbitBuilder.build(o.orbit);
+      const orbit = this._orbitBuilder.build(o.orbit, center);
+      const path = this._orbitBuilder.getPath(o.orbit, center);
+      const initialPos = Math.random();
+      
+      this.scene.onTick((elapsed) => {
+        const point = path.getPoint(1 - ((elapsed / o.orbit.period + initialPos) % 1));
+        obj.position.set(point.x, 0, point.y);
+        group.position.set(center.x, center.y, center.z);
+      });
+      group.rotation.set(center.x + 0, center.y + 0, center.z + o.orbit.inclination);
       group.add(orbit);
-      group.rotation.set(0, 0, o.orbit.inclination);
     }
+
     this.scene.add(group);
     return group;
   }
 
   // private methods
 
-  private buildAO(o: IAO) {
+  private buildAO(o: IAO, center?: THREE.Vector3) {
     switch (o.type) {
       case AOType.Sun:
         return this.buildSun(o);
@@ -46,11 +56,16 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
       case AOType.GasGiant:
       case AOType.IceGiant:
       case AOType.Moon:
+        return this.buildMoon(o, center);
       case AOType.Planet:
-        return this.buildPlanet(o);
+        return this.buildPlanet(o, center);
       default:
-        return this.buildDefault(o);
+        return this.buildDefault(o, center);
     }
+  }
+
+  private buildOrbit(group: THREE.Group, ao: IAO) {
+
   }
 
   private buildSun(o: IAO) {
@@ -70,15 +85,19 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
     return group;
   }
 
-  private buildPlanet(o: IAO) {
-    return this.buildDefault(o);
+  private buildPlanet(o: IAO, center?: THREE.Vector3) {
+    return this.buildDefault(o, center);
   }
 
-  private buildDefault(o: IAO) {
-    return this.getDefaultObject(o);
+  private buildMoon(o: IAO, center?: THREE.Vector3) {
+    return this.buildDefault(o, center);
   }
 
-  private getDefaultObject(o: IAO) {
+  private buildDefault(o: IAO, center?: THREE.Vector3) {
+    return this.getDefaultObject(o, center);
+  }
+
+  private getDefaultObject(o: IAO, center?: THREE.Vector3) {
     const group = new THREE.Group();
     const geo = new THREE.SphereGeometry(o.radius.value, 32, 32);
     const mat = new THREE[Constants.mode === 'actual' ? 'MeshStandardMaterial' : 'MeshBasicMaterial']({
@@ -88,16 +107,8 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
     obj.castShadow = true;
     obj.receiveShadow = true;
 
-    if (o.orbit) {
-      const path = this._orbitBuilder.getPath(o.orbit);
-      const initialPos = Math.random();
-      this.scene.onTick((elapsed) => {
-        const point = path.getPoint(1 - ((elapsed / o.orbit.period + initialPos) % 1));
-        obj.position.set(point.x, 0, point.y);
-      });
-    }
-
     group.add(obj);
+
     return group;
   }
 }
