@@ -125,7 +125,7 @@
               "actual": 206700.0,
               "simple": 38
             },
-            "period": 686.980,
+            "period": 686.98,
             "inclination": 7.155
           },
           "satellites": [
@@ -176,6 +176,126 @@
               }
             }
           ]
+        },
+        {
+          "type": "gas giant",
+          "name": "Jupiter",
+          "radius": {
+            "actual": 69.911,
+            "simple": 3
+          },
+          "color": "0xc99039",
+          "rotationPeriod": 0.41354167,
+          "orbit": {
+            "e": 0.0489,
+            "aphelion": {
+              "actual": 816363.0,
+              "simple": 80
+            },
+            "perihelion": {
+              "actual": 740595.0,
+              "simple": 75
+            },
+            "period": 4332.59,
+            "inclination": 6.09
+          },
+          "satellites": []
+        },
+        {
+          "type": "gas giant",
+          "name": "Saturn",
+          "radius": {
+            "actual": 58.232,
+            "simple": 2.8
+          },
+          "color": "0xbfbdaf",
+          "rotationPeriod": 0.4375,
+          "orbit": {
+            "e": 0.0565,
+            "aphelion": {
+              "actual": 1514500.0,
+              "simple": 100
+            },
+            "perihelion": {
+              "actual": 1352550.0,
+              "simple": 95
+            },
+            "period": 10759.22,
+            "inclination": 5.51
+          },
+          "satellites": []
+        },
+        {
+          "type": "gas giant",
+          "name": "Uranus",
+          "radius": {
+            "actual": 25.362,
+            "simple": 2.5
+          },
+          "color": "0xd1e7e7",
+          "rotationPeriod": -0.71833,
+          "orbit": {
+            "e": 0.04717,
+            "aphelion": {
+              "actual": 3006390.0,
+              "simple": 150
+            },
+            "perihelion": {
+              "actual": 2735560.0,
+              "simple": 140
+            },
+            "period": 30688.5,
+            "inclination": 6.48
+          },
+          "satellites": []
+        },
+        {
+          "type": "gas giant",
+          "name": "Neptune",
+          "radius": {
+            "actual": 24.622,
+            "simple": 2.5
+          },
+          "color": "0x5b5ddf",
+          "rotationPeriod": 0.6713,
+          "orbit": {
+            "e": 0.008678,
+            "aphelion": {
+              "actual": 4540000.0,
+              "simple": 200
+            },
+            "perihelion": {
+              "actual": 4460000.0,
+              "simple": 190
+            },
+            "period": 60195.0,
+            "inclination": 6.43
+          },
+          "satellites": []
+        },
+        {
+          "type": "dwarf planet",
+          "name": "Pluto",
+          "radius": {
+            "actual": 1.188,
+            "simple": 0.3
+          },
+          "color": "0xccba99",
+          "rotationPeriod": -6.387230,
+          "orbit": {
+            "e": 0.2488,
+            "aphelion": {
+              "actual": 7375930.0,
+              "simple": 300
+            },
+            "perihelion": {
+              "actual": 4436820.0,
+              "simple": 195
+            },
+            "period": 90560.0,
+            "inclination": 11.88
+          },
+          "satellites": []
         }
       ]
     }

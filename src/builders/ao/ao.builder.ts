@@ -56,7 +56,6 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
       case AOType.GasGiant:
       case AOType.IceGiant:
       case AOType.Moon:
-        return this.buildMoon(o, center);
       case AOType.Planet:
         return this.buildPlanet(o, center);
       default:
