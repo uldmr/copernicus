@@ -24,6 +24,12 @@ export interface IOrbit {
   /** Inclination to the Sun's equator (deg) */
   readonly inclination?: number;
 
+  /** Longitude of ascending node (deg) */
+  readonly ascNodeLong?: number;
+
+  /** Argument of perihelion (deg) */
+  readonly perihelionArg?: number;
+
   /** Orbital speed (Mm/s) */
   readonly speed?: number;
 }
@@ -36,6 +42,8 @@ export class Orbit implements IOrbit {
   public readonly semiMajorAxis?: number;
   public readonly semiMinorAxis?: number;
   public readonly inclination?: number;
+  public readonly ascNodeLong?: number;
+  public readonly perihelionArg?: number;
   public readonly speed?: number;
 
   constructor(src?: any) {
@@ -52,6 +60,8 @@ export class Orbit implements IOrbit {
     this.semiMajorAxis = (this.aphelion.value + this.perihelion.value) / 2;
     this.semiMinorAxis = this.semiMajorAxis * Math.sqrt(1 - Math.pow(this.e, 2));
     this.inclination = Converter.fromDeg(src?.inclination || 0);
-    this.speed = this.period ? (2 * Math.PI) / this.period : 0;
+    this.ascNodeLong = Converter.fromDeg(src?.ascNodeLong || 0);
+    this.perihelionArg = Converter.fromDeg(src?.perihelionArg || 0);
+    this.speed = this.period ? (2 * Math.PI) / Math.abs(this.period) : 0;
   }
 }

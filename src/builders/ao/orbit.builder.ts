@@ -32,7 +32,7 @@ export class OrbitBuilder extends BaseBuilder<IOrbit, THREE.Line> {
       0,
       2 * Math.PI,
       false,
-      0
+      o.perihelionArg
     );
     return curve.getPoints(360);
   }

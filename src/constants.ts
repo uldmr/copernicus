@@ -26,7 +26,7 @@ const Modes = {
     camera: {
       defaultPos: {
         x: 1,
-        y: 100,
+        y: 400,
         z: 1,
       },
       fov: 60,

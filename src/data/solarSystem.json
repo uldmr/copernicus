@@ -32,7 +32,9 @@
               "simple": 18
             },
             "period": 87.9691,
-            "inclination": 3.38
+            "inclination": 3.38,
+            "ascNodeLong": 48.331,
+            "perihelionArg": 29.124
           }
         },
         {
@@ -55,7 +57,9 @@
               "simple": 26
             },
             "period": 224.701,
-            "inclination": 3.86
+            "inclination": 3.86,
+            "ascNodeLong": 76.68,
+            "perihelionArg": 54.884
           }
         },
         {
@@ -78,7 +82,9 @@
               "simple": 31
             },
             "period": 365.256363,
-            "inclination": 7.155
+            "inclination": 7.155,
+            "ascNodeLong": -11.26064,
+            "perihelionArg": 114.20783
           },
           "satellites": [
             {
@@ -126,7 +132,9 @@
               "simple": 38
             },
             "period": 686.98,
-            "inclination": 7.155
+            "inclination": 7.155,
+            "ascNodeLong": 49.57854,
+            "perihelionArg": 286.5
           },
           "satellites": [
             {
@@ -197,9 +205,994 @@
               "simple": 75
             },
             "period": 4332.59,
-            "inclination": 6.09
+            "inclination": 6.09,
+            "ascNodeLong": 100.464,
+            "perihelionArg": 273.867
           },
-          "satellites": []
+          "satellites": [
+            {
+              "type": "moon",
+              "name": "Metis",
+              "radius": {
+                "actual": 0.0215,
+                "simple": 0.1
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.0002,
+                "aphelion": {
+                  "actual": 128.026,
+                  "simple": 3.7
+                },
+                "perihelion": {
+                  "actual": 127.974,
+                  "simple": 3.7
+                },
+                "period": 0.29478,
+                "inclination": 0.06
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Adrastea",
+              "radius": {
+                "actual": 0.0082,
+                "simple": 0.09
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.0015,
+                "aphelion": {
+                  "actual": 129.0,
+                  "simple": 3.8
+                },
+                "perihelion": {
+                  "actual": 129.0,
+                  "simple": 3.8
+                },
+                "period": 0.29826,
+                "inclination": 0.06
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Amalthea",
+              "radius": {
+                "actual": 0.0835,
+                "simple": 0.12
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.00319,
+                "aphelion": {
+                  "actual": 182.84,
+                  "simple": 4.1
+                },
+                "perihelion": {
+                  "actual": 181.15,
+                  "simple": 4.1
+                },
+                "period": 0.49817943,
+                "inclination": 0.374
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Thebe",
+              "radius": {
+                "actual": 0.0493,
+                "simple": 0.1
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.0175,
+                "aphelion": {
+                  "actual": 226.0,
+                  "simple": 4.3
+                },
+                "perihelion": {
+                  "actual": 218.0,
+                  "simple": 4.3
+                },
+                "period": 0.674536,
+                "inclination": 1.076
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Io",
+              "radius": {
+                "actual": 1.8216,
+                "simple": 0.3
+              },
+              "color": "0xffd966",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.0041,
+                "aphelion": {
+                  "actual": 423.4,
+                  "simple": 5
+                },
+                "perihelion": {
+                  "actual": 420.0,
+                  "simple": 5
+                },
+                "period": 1.769137786,
+                "inclination": 0.05
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Europa",
+              "radius": {
+                "actual": 1.5608,
+                "simple": 0.3
+              },
+              "color": "0xce7e00",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.009,
+                "aphelion": {
+                  "actual": 676.938,
+                  "simple": 6
+                },
+                "perihelion": {
+                  "actual": 664.862,
+                  "simple": 6
+                },
+                "period": 3.551181,
+                "inclination": 0.47
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Ganymede",
+              "radius": {
+                "actual": 2.6341,
+                "simple": 0.5
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.009,
+                "aphelion": {
+                  "actual": 1071.6,
+                  "simple": 6.8
+                },
+                "perihelion": {
+                  "actual": 1069.2,
+                  "simple": 6.8
+                },
+                "period": 7.15455296,
+                "inclination": 2.214
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Callisto",
+              "radius": {
+                "actual": 2.4103,
+                "simple": 0.5
+              },
+              "color": "0xa0bdb7",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.0074,
+                "aphelion": {
+                  "actual": 1897.0,
+                  "simple": 7.8
+                },
+                "perihelion": {
+                  "actual": 1869.0,
+                  "simple": 7.8
+                },
+                "period": 16.6890184,
+                "inclination": 2.017
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Themisto",
+              "radius": {
+                "actual": 0.0045,
+                "simple": 0.09
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.2522112,
+                "aphelion": {
+                  "actual": 7396.13,
+                  "simple": 10
+                },
+                "perihelion": {
+                  "actual": 7396.13,
+                  "simple": 10
+                },
+                "period": 129.95,
+                "inclination": 45.28121,
+                "ascNodeLong": 192.64162,
+                "perihelionArg": 241.25168
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Leda",
+              "radius": {
+                "actual": 0.0105,
+                "simple": 0.1
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.1648788,
+                "aphelion": {
+                  "actual": 11195.98,
+                  "simple": 12
+                },
+                "perihelion": {
+                  "actual": 11195.98,
+                  "simple": 12
+                },
+                "period": 242.02,
+                "inclination": 27.63631,
+                "ascNodeLong": 190.18497,
+                "perihelionArg": 312.92965
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Ersa",
+              "radius": {
+                "actual": 0.0015,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.094,
+                "aphelion": {
+                  "actual": 11483.0,
+                  "simple": 12.5
+                },
+                "perihelion": {
+                  "actual": 11483.0,
+                  "simple": 12.5
+                },
+                "period": 252.0,
+                "inclination": 30.61,
+                "ascNodeLong": 93.3,
+                "perihelionArg": 346.7
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Himalia",
+              "radius": {
+                "actual": 0.1396,
+                "simple": 0.2
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.094,
+                "aphelion": {
+                  "actual": 11388.69,
+                  "simple": 12.45
+                },
+                "perihelion": {
+                  "actual": 11388.69,
+                  "simple": 12.45
+                },
+                "period": 248.29,
+                "inclination": 29.90917,
+                "ascNodeLong": 44.99935,
+                "perihelionArg": 21.60643
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Pandia",
+              "radius": {
+                "actual": 0.0015,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.18,
+                "aphelion": {
+                  "actual": 11525.0,
+                  "simple": 12.52
+                },
+                "perihelion": {
+                  "actual": 11525.0,
+                  "simple": 12.52
+                },
+                "period": 252.1,
+                "inclination": 28.15,
+                "ascNodeLong": 228.4,
+                "perihelionArg": 238.8
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Lysithea",
+              "radius": {
+                "actual": 0.0211,
+                "simple": 0.1
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.1478734,
+                "aphelion": {
+                  "actual": 11700.71,
+                  "simple": 12.6
+                },
+                "perihelion": {
+                  "actual": 11700.71,
+                  "simple": 12.6
+                },
+                "period": 258.57,
+                "inclination": 26.29254,
+                "ascNodeLong": 343.46495,
+                "perihelionArg": 94.8001
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Elara",
+              "radius": {
+                "actual": 0.04,
+                "simple": 0.1
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.1961487,
+                "aphelion": {
+                  "actual": 11703.13,
+                  "simple": 12.6
+                },
+                "perihelion": {
+                  "actual": 11703.13,
+                  "simple": 12.6
+                },
+                "period": 258.65,
+                "inclination": 30.51712,
+                "ascNodeLong": 90.86474,
+                "perihelionArg": 191.19922
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Dia",
+              "radius": {
+                "actual": 0.002,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.211,
+                "aphelion": {
+                  "actual": 12118.0,
+                  "simple": 12.8
+                },
+                "perihelion": {
+                  "actual": 12118.0,
+                  "simple": 12.8
+                },
+                "period": 287.0,
+                "inclination": 28.23,
+                "ascNodeLong": 290.9,
+                "perihelionArg": 178.0
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Carpo",
+              "radius": {
+                "actual": 0.0015,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.43,
+                "aphelion": {
+                  "actual": 16989.0,
+                  "simple": 13.2
+                },
+                "perihelion": {
+                  "actual": 16989.0,
+                  "simple": 13.2
+                },
+                "period": 456.1,
+                "inclination": 51.4,
+                "ascNodeLong": 60.9,
+                "perihelionArg": 90.0
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Valetudo",
+              "radius": {
+                "actual": 0.0005,
+                "simple": 0.06
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.2018315,
+                "aphelion": {
+                  "actual": 18819.02,
+                  "simple": 13.6
+                },
+                "perihelion": {
+                  "actual": 18819.02,
+                  "simple": 13.6
+                },
+                "period": 527.41,
+                "inclination": 32.03294,
+                "ascNodeLong": 235.45916,
+                "perihelionArg": 122.37546
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Euporie",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.144,
+                "aphelion": {
+                  "actual": 19302.0,
+                  "simple": 13.8
+                },
+                "perihelion": {
+                  "actual": 19302.0,
+                  "simple": 13.8
+                },
+                "period": -550.7,
+                "inclination": 145.8,
+                "ascNodeLong": 64.9,
+                "perihelionArg": 74.6
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Jupiter LV",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.105,
+                "aphelion": {
+                  "actual": 20274.0,
+                  "simple": 13.9
+                },
+                "perihelion": {
+                  "actual": 20274.0,
+                  "simple": 13.9
+                },
+                "period": -588.0,
+                "inclination": 146.4,
+                "ascNodeLong": 215.5,
+                "perihelionArg": 98.15
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Eupheme",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.253,
+                "aphelion": {
+                  "actual": 21199.71,
+                  "simple": 14.1
+                },
+                "perihelion": {
+                  "actual": 21199.71,
+                  "simple": 14.1
+                },
+                "period": -628.06,
+                "inclination": 148.0,
+                "ascNodeLong": 292.0,
+                "perihelionArg": 109.0
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Jupiter LII",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.307,
+                "aphelion": {
+                  "actual": 20307.15,
+                  "simple": 13.9
+                },
+                "perihelion": {
+                  "actual": 20307.15,
+                  "simple": 13.9
+                },
+                "period": -588.1,
+                "inclination": 150.4
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Jupiter LIV",
+              "radius": {
+                "actual": 0.0005,
+                "simple": 0.06
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.141,
+                "aphelion": {
+                  "actual": 20650.845,
+                  "simple": 13.9
+                },
+                "perihelion": {
+                  "actual": 20650.845,
+                  "simple": 13.9
+                },
+                "period": -602.7,
+                "inclination": 139.8,
+                "ascNodeLong": 293.8,
+                "perihelionArg": 328.2
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Mneme",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.227,
+                "aphelion": {
+                  "actual": 21069.0,
+                  "simple": 14
+                },
+                "perihelion": {
+                  "actual": 21069.0,
+                  "simple": 14
+                },
+                "period": -602.7,
+                "inclination": 148.6,
+                "ascNodeLong": 18.1,
+                "perihelionArg": 41.7
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Euanthe",
+              "radius": {
+                "actual": 0.0015,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.232,
+                "aphelion": {
+                  "actual": 20799.0,
+                  "simple": 13.9
+                },
+                "perihelion": {
+                  "actual": 20799.0,
+                  "simple": 13.9
+                },
+                "period": -602.81,
+                "inclination": 148.9,
+                "ascNodeLong": 271.0,
+                "perihelionArg": 316.0
+              }
+            },
+            {
+              "type": "moon",
+              "name": "S/2003 J 16",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.3330999,
+                "aphelion": {
+                  "actual": 20512.0,
+                  "simple": 13.8
+                },
+                "perihelion": {
+                  "actual": 20512.0,
+                  "simple": 13.8
+                },
+                "period": -600.18,
+                "inclination": 151.16323,
+                "ascNodeLong": 83.26365,
+                "perihelionArg": 86.51495
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Harpalyke",
+              "radius": {
+                "actual": 0.002,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.1602677,
+                "aphelion": {
+                  "actual": 21280.18,
+                  "simple": 14.1
+                },
+                "perihelion": {
+                  "actual": 21280.18,
+                  "simple": 14.1
+                },
+                "period": -634.19,
+                "inclination": 148.29788,
+                "ascNodeLong": 92.54746,
+                "perihelionArg": 193.28018
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Orthosie",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.4837243,
+                "aphelion": {
+                  "actual": 21170.54,
+                  "simple": 14.1
+                },
+                "perihelion": {
+                  "actual": 21170.54,
+                  "simple": 14.1
+                },
+                "period": -629.29,
+                "inclination": 148.4874,
+                "ascNodeLong": 287.90005,
+                "perihelionArg": 261.21085
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Helike",
+              "radius": {
+                "actual": 0.002,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.156,
+                "aphelion": {
+                  "actual": 21263.0,
+                  "simple": 14.1
+                },
+                "perihelion": {
+                  "actual": 21263.0,
+                  "simple": 14.1
+                },
+                "period": -634.8,
+                "inclination": 154.8,
+                "ascNodeLong": 100.3,
+                "perihelionArg": 314.7
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Praxidike",
+              "radius": {
+                "actual": 0.0035,
+                "simple": 0.085
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.23,
+                "aphelion": {
+                  "actual": 21147.0,
+                  "simple": 14.1
+                },
+                "perihelion": {
+                  "actual": 21147.0,
+                  "simple": 14.1
+                },
+                "period": -609.25,
+                "inclination": 149.0,
+                "ascNodeLong": 285.2,
+                "perihelionArg": 209.7
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Jupiter LXIV",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.148,
+                "aphelion": {
+                  "actual": 20694.0,
+                  "simple": 13.9
+                },
+                "perihelion": {
+                  "actual": 20694.0,
+                  "simple": 13.9
+                },
+                "period": -606.3,
+                "inclination": 147.9,
+                "ascNodeLong": 82.5,
+                "perihelionArg": 171.6
+              }
+            },
+            {
+              "type": "moon",
+              "name": "S/2003 J 12",
+              "radius": {
+                "actual": 0.0005,
+                "simple": 0.06
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.3657005,
+                "aphelion": {
+                  "actual": 21557.74,
+                  "simple": 14.1
+                },
+                "perihelion": {
+                  "actual": 21557.74,
+                  "simple": 14.1
+                },
+                "period": -646.64,
+                "inclination": 154.69036,
+                "ascNodeLong": 127.52296,
+                "perihelionArg": 86.84711
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Jupiter LXVIII",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.3657005,
+                "aphelion": {
+                  "actual": 20627.0,
+                  "simple": 13.8
+                },
+                "perihelion": {
+                  "actual": 20627.0,
+                  "simple": 13.8
+                },
+                "period": -602.6,
+                "inclination": 143.4,
+                "ascNodeLong": 321.5,
+                "perihelionArg": 323.5
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Thelxinoe",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.221,
+                "aphelion": {
+                  "actual": 21162.0,
+                  "simple": 14.1
+                },
+                "perihelion": {
+                  "actual": 21162.0,
+                  "simple": 14.1
+                },
+                "period": -628.1,
+                "inclination": 151.4,
+                "ascNodeLong": 206.2,
+                "perihelionArg": 179.8
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Thyone",
+              "radius": {
+                "actual": 0.002,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.229,
+                "aphelion": {
+                  "actual": 20940.0,
+                  "simple": 13.9
+                },
+                "perihelion": {
+                  "actual": 20940.0,
+                  "simple": 13.9
+                },
+                "period": -603.58,
+                "inclination": 148.5,
+                "ascNodeLong": 243.0,
+                "perihelionArg": 89.1
+              }
+            },
+            {
+              "type": "moon",
+              "name": "S/2003 J 2",
+              "radius": {
+                "actual": 0.001,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.2776569,
+                "aphelion": {
+                  "actual": 20554.39,
+                  "simple": 13.9
+                },
+                "perihelion": {
+                  "actual": 20554.39,
+                  "simple": 13.9
+                },
+                "period": -602.02,
+                "inclination": 149.20392,
+                "ascNodeLong": 50.46976,
+                "perihelionArg": 224.95527
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Ananke",
+              "radius": {
+                "actual": 0.015,
+                "simple": 0.1
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.1747248,
+                "aphelion": {
+                  "actual": 21042.47,
+                  "simple": 14.1
+                },
+                "perihelion": {
+                  "actual": 21042.47,
+                  "simple": 14.1
+                },
+                "period": -623.59,
+                "inclination": 148.67482,
+                "ascNodeLong": 86.44368,
+                "perihelionArg": 135.63033
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Iocaste",
+              "radius": {
+                "actual": 0.0025,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.3294908,
+                "aphelion": {
+                  "actual": 21431.65,
+                  "simple": 14.2
+                },
+                "perihelion": {
+                  "actual": 21431.65,
+                  "simple": 14.2
+                },
+                "period": -640.97,
+                "inclination": 149.42446,
+                "ascNodeLong": 343.53045,
+                "perihelionArg": 110.27239
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Hermippe",
+              "radius": {
+                "actual": 0.002,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.198252,
+                "aphelion": {
+                  "actual": 20665.87,
+                  "simple": 13.8
+                },
+                "perihelion": {
+                  "actual": 20665.87,
+                  "simple": 13.8
+                },
+                "period": -606.93,
+                "inclination": 146.76001,
+                "ascNodeLong": 37.24213,
+                "perihelionArg": 356.27211
+              }
+            },
+            {
+              "type": "moon",
+              "name": "Jupiter LXX",
+              "radius": {
+                "actual": 0.0015,
+                "simple": 0.08
+              },
+              "color": "0xc9c9c9",
+              "rotationPeriod": 1,
+              "orbit": {
+                "e": 0.229,
+                "aphelion": {
+                  "actual": 21487.0,
+                  "simple": 14.2
+                },
+                "perihelion": {
+                  "actual": 21487.0,
+                  "simple": 14.2
+                },
+                "period": -639.2,
+                "inclination": 152.7,
+                "ascNodeLong": 306.4,
+                "perihelionArg": 317.7
+              }
+            }
+          ]
         },
         {
           "type": "gas giant",
@@ -214,14 +1207,16 @@
             "e": 0.0565,
             "aphelion": {
               "actual": 1514500.0,
-              "simple": 100
+              "simple": 120
             },
             "perihelion": {
               "actual": 1352550.0,
-              "simple": 95
+              "simple": 115
             },
             "period": 10759.22,
-            "inclination": 5.51
+            "inclination": 5.51,
+            "ascNodeLong": 113.665,
+            "perihelionArg": 339.392
           },
           "satellites": []
         },
@@ -238,14 +1233,16 @@
             "e": 0.04717,
             "aphelion": {
               "actual": 3006390.0,
-              "simple": 150
+              "simple": 170
             },
             "perihelion": {
               "actual": 2735560.0,
-              "simple": 140
+              "simple": 160
             },
             "period": 30688.5,
-            "inclination": 6.48
+            "inclination": 6.48,
+            "ascNodeLong": 74.006,
+            "perihelionArg": 96.998857
           },
           "satellites": []
         },
@@ -262,14 +1259,16 @@
             "e": 0.008678,
             "aphelion": {
               "actual": 4540000.0,
-              "simple": 200
+              "simple": 230
             },
             "perihelion": {
               "actual": 4460000.0,
-              "simple": 190
+              "simple": 220
             },
             "period": 60195.0,
-            "inclination": 6.43
+            "inclination": 6.43,
+            "ascNodeLong": 131.783,
+            "perihelionArg": 273.187
           },
           "satellites": []
         },
@@ -281,19 +1280,21 @@
             "simple": 0.3
           },
           "color": "0xccba99",
-          "rotationPeriod": -6.387230,
+          "rotationPeriod": -6.38723,
           "orbit": {
             "e": 0.2488,
             "aphelion": {
               "actual": 7375930.0,
-              "simple": 300
+              "simple": 350
             },
             "perihelion": {
               "actual": 4436820.0,
-              "simple": 195
+              "simple": 240
             },
             "period": 90560.0,
-            "inclination": 11.88
+            "inclination": 11.88,
+            "ascNodeLong": 110.299,
+            "perihelionArg": 113.834
           },
           "satellites": []
         }

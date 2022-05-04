@@ -32,13 +32,15 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
       const orbit = this._orbitBuilder.build(o.orbit, center);
       const path = this._orbitBuilder.getPath(o.orbit, center);
       const initialPos = Math.random();
-      
+
       this.scene.onTick((elapsed) => {
-        const point = path.getPoint(1 - ((elapsed / o.orbit.period + initialPos) % 1));
-        obj.position.set(point.x, 0, point.y);
+        const t0 = (elapsed / Math.abs(o.orbit.period) + initialPos) % 1;
+        const t = o.orbit.period >= 0 ? 1 - t0 : t0;
+        const point = path.getPoint(t);
+        if (point) obj.position.set(point.x, 0, point.y);
         group.position.set(center.x, center.y, center.z);
       });
-      group.rotation.set(center.x + 0, center.y + 0, center.z + o.orbit.inclination);
+      group.rotation.set(center.x + 0, center.y + o.orbit.ascNodeLong, center.z + o.orbit.inclination);
       group.add(orbit);
     }
 
@@ -63,10 +65,6 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
     }
   }
 
-  private buildOrbit(group: THREE.Group, ao: IAO) {
-
-  }
-
   private buildSun(o: IAO) {
     const group = new THREE.Group();
     const geo = new THREE.IcosahedronGeometry(o.radius.value, 32);
@@ -85,10 +83,6 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
   }
 
   private buildPlanet(o: IAO, center?: THREE.Vector3) {
-    return this.buildDefault(o, center);
-  }
-
-  private buildMoon(o: IAO, center?: THREE.Vector3) {
     return this.buildDefault(o, center);
   }
 
