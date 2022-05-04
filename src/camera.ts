@@ -16,6 +16,10 @@ export class Camera {
     this.initControls(domElement);
   }
 
+  public get controls() {
+    return this._controls;
+  }
+
   public get instance() {
     return this._cam;
   }
@@ -23,6 +27,7 @@ export class Camera {
   public update() {
     this._cam.aspect = Window.aspect;
     this._cam.updateProjectionMatrix();
+    this._controls.update();
   }
 
   public onChange(handlers: CameraChangeHandler) {
@@ -40,11 +45,13 @@ export class Camera {
     this._controls = new OrbitControls(this._cam, domElement);
     this._controls.zoomSpeed = 1;
     this._controls.minDistance = Constants.zoom.min;
-    this._controls.autoRotate = true;
-    this._controls.autoRotateSpeed = 2;
+    this._controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+    this._controls.dampingFactor = 0.05;
+    this._controls.listenToKeyEvents(window as any);
     this._controls.addEventListener('change', (e) => {
       this._cameraChangeHandlers.forEach((handler) => {
         handler(this._cam);
+        this.update();
       });
     });
   }

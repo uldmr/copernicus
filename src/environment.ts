@@ -27,6 +27,7 @@ export class Environment {
   }
 
   public render() {
+    this._camera.update();
     this._renderers.forEach((renderer) => {
       renderer.render(this._scene, this._camera.instance);
     });
@@ -37,7 +38,7 @@ export class Environment {
   }
 
   public get camera() {
-    return this._camera.instance;
+    return this._camera;
   }
 
   // private methods
