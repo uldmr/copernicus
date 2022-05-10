@@ -21,7 +21,7 @@ export interface IOrbit {
   /** Shortest radius of the orbit (Mm) */
   readonly semiMinorAxis?: number;
 
-  /** Inclination to the Sun's equator (deg) */
+  /** Inclination to ecliptic (deg) */
   readonly inclination?: number;
 
   /** Longitude of ascending node (deg) */
