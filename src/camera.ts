@@ -26,6 +26,7 @@ export class Camera {
 
   public update() {
     this._cam.aspect = Window.aspect;
+    this._cam.updateMatrixWorld();
     this._cam.updateProjectionMatrix();
     this._controls.update();
   }
