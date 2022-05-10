@@ -45,6 +45,9 @@ export interface IAO {
 
   /** Object's satellites */
   readonly satellites?: IAO[];
+
+  /** Mark as lost */
+  readonly lost?: boolean;
 }
 
 export class AO implements IAO {
@@ -57,6 +60,7 @@ export class AO implements IAO {
   public readonly orbit?: IOrbit;
   public readonly atmosphere?: IAtmosphere;
   public readonly satellites?: AO[];
+  public readonly lost?: boolean;
 
   constructor(src?: any) {
     this.type = src?.type || AOType.Undefined;
@@ -71,5 +75,6 @@ export class AO implements IAO {
     this.orbit = src?.orbit ? new Orbit(src.orbit) : null;
     this.atmosphere = src?.atmosphere ? new Atmosphere(src.atmosphere) : null;
     this.satellites = src?.satellites?.map((o: any) => new AO(o)) || [];
+    this.lost = src?.lost;
   }
 }
