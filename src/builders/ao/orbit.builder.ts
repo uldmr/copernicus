@@ -7,7 +7,7 @@ import { BaseBuilder } from '../base.builder';
 export class OrbitBuilder extends BaseBuilder<IOrbit, THREE.Line> {
   public build(o: IOrbit, center?: THREE.Vector3) {
     const geo = this.getGeometry(o, center);
-    const mat = new THREE.LineBasicMaterial({ color: Constants.ao.orbit.color, side: THREE.DoubleSide });
+    const mat = new THREE.LineBasicMaterial({ color: Constants.ao.orbit.color, side: THREE.DoubleSide, transparent: true, opacity: 0.2 });
     const orbit = new THREE.Line(geo, mat);
     orbit.rotation.set(THREE.MathUtils.degToRad(Constants.ao.orbit.inclination), 0, 0);
     return orbit;
