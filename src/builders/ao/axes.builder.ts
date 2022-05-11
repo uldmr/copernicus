@@ -24,7 +24,7 @@ export class AxesBuilder extends BaseBuilder<IAO, THREE.Group> {
 
   private buildAxis(o: IAO, axis: Axis) {
     const lineWidth = o.radius.value * Constants.ao.axes.widthFactor;
-    let color: THREE.ColorRepresentation;
+    let color: THREE.ColorRepresentation = Constants.ao.defaultColor;
     let points: THREE.Vector3[] = [new THREE.Vector3(0, 0, 0)];
 
     switch (axis) {

@@ -48,6 +48,12 @@ export interface IAO {
 
   /** Mark as lost */
   readonly lost?: boolean;
+
+  /** Axial tilt (deg) */
+  readonly axialTilt?: number;
+
+  /** Rotation speed (rad/ms) */
+  readonly speed?: number;
 }
 
 export class AO implements IAO {
@@ -61,6 +67,8 @@ export class AO implements IAO {
   public readonly atmosphere?: IAtmosphere;
   public readonly satellites?: AO[];
   public readonly lost?: boolean;
+  public readonly axialTilt?: number;
+  public readonly speed?: number;
 
   constructor(src?: any) {
     this.type = src?.type || AOType.Undefined;
@@ -71,10 +79,12 @@ export class AO implements IAO {
     });
     this.diameter = this.radius.value * 2;
     this.color = parseInt(src?.color) || Constants.ao.defaultColor;
-    this.rotationPeriod = src?.rotationPeriod;
     this.orbit = src?.orbit ? new Orbit(src.orbit) : null;
+    this.rotationPeriod = Converter.fromDays(src?.rotationPeriod || this.orbit?.period || 0);
     this.atmosphere = src?.atmosphere ? new Atmosphere(src.atmosphere) : null;
     this.satellites = src?.satellites?.map((o: any) => new AO(o)) || [];
     this.lost = src?.lost;
+    this.axialTilt = Converter.fromDeg(src?.axialTilt || 0);
+    this.speed = Converter.getSpeedFromPeriod(this.rotationPeriod);
   }
 }

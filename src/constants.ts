@@ -19,6 +19,8 @@ const Modes = {
     units: {
       /** One distance unit presented in Megameters (Mm) */
       distance: 6.378,
+      /** One period unit presented in Earth Days */
+      rotationPeriod: 24 * 60 * 60 * 1000,
     },
   },
   simple: {
@@ -39,6 +41,8 @@ const Modes = {
     units: {
       /** One distance unit presented in Megameters (Mm) */
       distance: 6.378,
+      /** One period unit presented in Earth Days */
+      rotationPeriod: 24 * 60,
     },
   },
 };

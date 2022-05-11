@@ -18,4 +18,16 @@ export class Converter {
   public static toDeg(value: number) {
     return MathUtils.radToDeg(value);
   }
+
+  public static fromDays(value: number) {
+    return value * Constants.units.rotationPeriod;
+  }
+
+  public static toDays(value: number) {
+    return value / Constants.units.rotationPeriod;
+  }
+
+  public static getSpeedFromPeriod(value: number) {
+    return value ? (2 * Math.PI) / value : 0;
+  }
 }

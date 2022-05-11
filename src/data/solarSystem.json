@@ -7,6 +7,7 @@
         "actual": 695.7,
         "simple": 5
       },
+      "rotationPeriod": 25.05,
       "color": "0xFFD300",
       "atmosphere": {
         "color": "0xFFD300"
@@ -21,6 +22,7 @@
           },
           "color": "0x7d827e",
           "rotationPeriod": 58.646,
+          "axialTilt": 0.034,
           "orbit": {
             "e": 0.20563,
             "aphelion": {
@@ -46,6 +48,7 @@
           },
           "color": "0xc18f17",
           "rotationPeriod": -243.0226,
+          "axialTilt": 177.36,
           "orbit": {
             "e": 0.006772,
             "aphelion": {
@@ -71,6 +74,7 @@
           },
           "color": "0x6b93d6",
           "rotationPeriod": 0.997269,
+          "axialTilt": 23.4392811,
           "orbit": {
             "e": 0.0167086,
             "aphelion": {
@@ -121,6 +125,7 @@
           },
           "color": "0xc1440e",
           "rotationPeriod": 1.025957,
+          "axialTilt": 25.19,
           "orbit": {
             "e": 0.0934,
             "aphelion": {
@@ -145,7 +150,6 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
               "orbit": {
                 "e": 0.0151,
                 "aphelion": {
@@ -168,7 +172,6 @@
                 "simple": 0.09
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
               "orbit": {
                 "e": 0.00033,
                 "aphelion": {
@@ -194,6 +197,7 @@
           },
           "color": "0xc99039",
           "rotationPeriod": 0.41354167,
+          "axialTilt": 3.13,
           "orbit": {
             "e": 0.0489,
             "aphelion": {
@@ -218,7 +222,6 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
               "orbit": {
                 "e": 0.0002,
                 "aphelion": {
@@ -241,7 +244,6 @@
                 "simple": 0.09
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
               "orbit": {
                 "e": 0.0015,
                 "aphelion": {
@@ -264,7 +266,6 @@
                 "simple": 0.12
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
               "orbit": {
                 "e": 0.00319,
                 "aphelion": {
@@ -287,7 +288,7 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.0175,
                 "aphelion": {
@@ -310,7 +311,6 @@
                 "simple": 0.3
               },
               "color": "0xffd966",
-              "rotationPeriod": 1,
               "orbit": {
                 "e": 0.0041,
                 "aphelion": {
@@ -333,7 +333,6 @@
                 "simple": 0.3
               },
               "color": "0xce7e00",
-              "rotationPeriod": 1,
               "orbit": {
                 "e": 0.009,
                 "aphelion": {
@@ -356,7 +355,7 @@
                 "simple": 0.5
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.009,
                 "aphelion": {
@@ -379,7 +378,7 @@
                 "simple": 0.5
               },
               "color": "0xa0bdb7",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.0074,
                 "aphelion": {
@@ -402,7 +401,7 @@
                 "simple": 0.09
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2522112,
                 "aphelion": {
@@ -427,7 +426,7 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.1648788,
                 "aphelion": {
@@ -452,7 +451,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.094,
                 "aphelion": {
@@ -477,7 +476,7 @@
                 "simple": 0.2
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.094,
                 "aphelion": {
@@ -502,7 +501,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.18,
                 "aphelion": {
@@ -527,7 +526,7 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.1478734,
                 "aphelion": {
@@ -552,7 +551,7 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.1961487,
                 "aphelion": {
@@ -577,7 +576,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.211,
                 "aphelion": {
@@ -602,7 +601,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.43,
                 "aphelion": {
@@ -627,7 +626,7 @@
                 "simple": 0.06
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2018315,
                 "aphelion": {
@@ -652,7 +651,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.144,
                 "aphelion": {
@@ -677,7 +676,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.105,
                 "aphelion": {
@@ -702,7 +701,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.253,
                 "aphelion": {
@@ -727,7 +726,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.307,
                 "aphelion": {
@@ -750,7 +749,7 @@
                 "simple": 0.06
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.141,
                 "aphelion": {
@@ -775,7 +774,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.227,
                 "aphelion": {
@@ -800,7 +799,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.232,
                 "aphelion": {
@@ -825,7 +824,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.3330999,
                 "aphelion": {
@@ -850,7 +849,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.1602677,
                 "aphelion": {
@@ -875,7 +874,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.4837243,
                 "aphelion": {
@@ -900,7 +899,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.156,
                 "aphelion": {
@@ -925,7 +924,7 @@
                 "simple": 0.085
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.23,
                 "aphelion": {
@@ -950,7 +949,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.148,
                 "aphelion": {
@@ -975,7 +974,7 @@
                 "simple": 0.06
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.3657005,
                 "aphelion": {
@@ -1000,7 +999,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.3657005,
                 "aphelion": {
@@ -1025,7 +1024,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.221,
                 "aphelion": {
@@ -1050,7 +1049,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.229,
                 "aphelion": {
@@ -1075,7 +1074,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2776569,
                 "aphelion": {
@@ -1100,7 +1099,7 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.1747248,
                 "aphelion": {
@@ -1125,7 +1124,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.3294908,
                 "aphelion": {
@@ -1150,7 +1149,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.198252,
                 "aphelion": {
@@ -1175,7 +1174,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.229,
                 "aphelion": {
@@ -1200,7 +1199,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.194,
                 "aphelion": {
@@ -1223,7 +1222,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2097026,
                 "aphelion": {
@@ -1248,7 +1247,7 @@
                 "simple": 0.06
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.312,
                 "aphelion": {
@@ -1273,7 +1272,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.25,
                 "aphelion": {
@@ -1298,7 +1297,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2975371,
                 "aphelion": {
@@ -1323,7 +1322,7 @@
                 "simple": 0.06
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.332,
                 "aphelion": {
@@ -1346,7 +1345,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.4967418,
                 "aphelion": {
@@ -1371,7 +1370,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.1500864,
                 "aphelion": {
@@ -1396,7 +1395,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.236,
                 "aphelion": {
@@ -1421,7 +1420,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2263119,
                 "aphelion": {
@@ -1446,7 +1445,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.264,
                 "aphelion": {
@@ -1471,7 +1470,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2052559,
                 "aphelion": {
@@ -1496,7 +1495,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2893464,
                 "aphelion": {
@@ -1521,7 +1520,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2413,
                 "aphelion": {
@@ -1544,7 +1543,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.264,
                 "aphelion": {
@@ -1569,7 +1568,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.272,
                 "aphelion": {
@@ -1594,7 +1593,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.259,
                 "aphelion": {
@@ -1619,7 +1618,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2487538,
                 "aphelion": {
@@ -1644,7 +1643,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.233,
                 "aphelion": {
@@ -1669,7 +1668,7 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2294925,
                 "aphelion": {
@@ -1694,7 +1693,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2,
                 "aphelion": {
@@ -1719,7 +1718,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.257,
                 "aphelion": {
@@ -1744,7 +1743,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.32,
                 "aphelion": {
@@ -1767,7 +1766,7 @@
                 "simple": 0.06
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.17019,
                 "aphelion": {
@@ -1792,7 +1791,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.284,
                 "aphelion": {
@@ -1817,7 +1816,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.557,
                 "aphelion": {
@@ -1840,7 +1839,7 @@
                 "simple": 0.085
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.3028225,
                 "aphelion": {
@@ -1865,7 +1864,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.328,
                 "aphelion": {
@@ -1888,7 +1887,7 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.6110162,
                 "aphelion": {
@@ -1913,7 +1912,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.312,
                 "aphelion": {
@@ -1937,7 +1936,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.2065969,
                 "aphelion": {
@@ -1962,7 +1961,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.410217,
                 "aphelion": {
@@ -1987,7 +1986,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.319,
                 "aphelion": {
@@ -2010,7 +2009,7 @@
                 "simple": 0.1
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.336655,
                 "aphelion": {
@@ -2035,7 +2034,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.397,
                 "aphelion": {
@@ -2058,7 +2057,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.432,
                 "aphelion": {
@@ -2081,7 +2080,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.334,
                 "aphelion": {
@@ -2104,7 +2103,7 @@
                 "simple": 0.085
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.3095704,
                 "aphelion": {
@@ -2129,7 +2128,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.3207567,
                 "aphelion": {
@@ -2154,7 +2153,7 @@
                 "simple": 0.08
               },
               "color": "0xc9c9c9",
-              "rotationPeriod": 1,
+
               "orbit": {
                 "e": 0.325,
                 "aphelion": {
@@ -2180,6 +2179,7 @@
           },
           "color": "0xbfbdaf",
           "rotationPeriod": 0.4375,
+          "axialTilt": 26.73,
           "orbit": {
             "e": 0.0565,
             "aphelion": {
@@ -2206,6 +2206,7 @@
           },
           "color": "0xd1e7e7",
           "rotationPeriod": -0.71833,
+          "axialTilt": 97.77,
           "orbit": {
             "e": 0.04717,
             "aphelion": {
@@ -2232,6 +2233,7 @@
           },
           "color": "0x5b5ddf",
           "rotationPeriod": 0.6713,
+          "axialTilt": 28.32,
           "orbit": {
             "e": 0.008678,
             "aphelion": {
@@ -2258,6 +2260,7 @@
           },
           "color": "0xccba99",
           "rotationPeriod": -6.38723,
+          "axialTilt": 122.53,
           "orbit": {
             "e": 0.2488,
             "aphelion": {

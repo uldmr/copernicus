@@ -30,7 +30,7 @@ export interface IOrbit {
   /** Argument of perihelion (deg) */
   readonly perihelionArg?: number;
 
-  /** Orbital speed (Mm/s) */
+  /** Orbital speed (rad/ms) */
   readonly speed?: number;
 }
 
@@ -48,7 +48,7 @@ export class Orbit implements IOrbit {
 
   constructor(src?: any) {
     this.e = Math.abs(src?.e || 0);
-    this.period = src?.period || 0;
+    this.period = Converter.fromDays(src?.period || 0);
     this.aphelion = new Param({
       actual: Converter.fromMm(src?.aphelion?.actual || 0),
       simple: src?.aphelion?.simple || 0,
@@ -62,6 +62,6 @@ export class Orbit implements IOrbit {
     this.inclination = Converter.fromDeg(src?.inclination || 0);
     this.ascNodeLong = Converter.fromDeg(src?.ascNodeLong || 0);
     this.perihelionArg = Converter.fromDeg(src?.perihelionArg || 0);
-    this.speed = this.period ? (2 * Math.PI) / Math.abs(this.period) : 0;
+    this.speed = Converter.getSpeedFromPeriod(this.period);
   }
 }
