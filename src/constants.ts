@@ -61,6 +61,18 @@ export const Constants = {
     atmosphere: {
       color: 0xffffff,
     },
+    axes: {
+      widthFactor: 2.5,
+      x: {
+        color: 0xd6462d,
+      },
+      y: {
+        color: 0x51d62d,
+      },
+      z: {
+        color: 0x2d6dd6,
+      },
+    },
   },
   sun: {
     lightPower: 100000000,
