@@ -3,6 +3,7 @@ import { Converter } from '../../utils';
 import { IParam, Param } from '../param';
 import { Atmosphere, IAtmosphere } from './atmosphere';
 import { IOrbit, Orbit } from './orbit';
+import { IRing, Ring } from './ring';
 
 export enum AOType {
   Asteroid = 'asteroid',
@@ -13,7 +14,6 @@ export enum AOType {
   Sun = 'sun',
   Moon = 'moon',
   Planet = 'planet',
-  RingSystem = 'ring system',
   Undefined = 'undefined',
 }
 
@@ -46,6 +46,9 @@ export interface IAO {
   /** Object's satellites */
   readonly satellites?: IAO[];
 
+  /** Ring system of the AO */
+  readonly ringSystem?: IRing[];
+
   /** Mark as lost */
   readonly lost?: boolean;
 
@@ -66,6 +69,7 @@ export class AO implements IAO {
   public readonly orbit?: IOrbit;
   public readonly atmosphere?: IAtmosphere;
   public readonly satellites?: AO[];
+  public readonly ringSystem?: Ring[];
   public readonly lost?: boolean;
   public readonly axialTilt?: number;
   public readonly speed?: number;
@@ -83,6 +87,7 @@ export class AO implements IAO {
     this.rotationPeriod = Converter.fromDays(src?.rotationPeriod || this.orbit?.period || 0);
     this.atmosphere = src?.atmosphere ? new Atmosphere(src.atmosphere) : null;
     this.satellites = src?.satellites?.map((o: any) => new AO(o)) || [];
+    this.ringSystem = src?.ringSystem?.map((r: any) => new Ring(r)) || [];
     this.lost = src?.lost;
     this.axialTilt = Converter.fromDeg(src?.axialTilt || 0);
     this.speed = Converter.getSpeedFromPeriod(this.rotationPeriod);

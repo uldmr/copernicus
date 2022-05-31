@@ -5,7 +5,7 @@
       "name": "Sun",
       "radius": {
         "actual": 695.7,
-        "simple": 5
+        "simple": 6
       },
       "rotationPeriod": 25.05,
       "color": "0xFFD300",
@@ -2168,6 +2168,80 @@
                 "inclination": 145.0
               }
             }
+          ],
+          "ringSystem": [
+            {
+              "type": "ring",
+              "name": "Halo Ring",
+              "radius": {
+                "actual": 92.0,
+                "simple": 3.956
+              },
+              "width": {
+                "actual": 30.5,
+                "simple": 1.312
+              },
+              "thickness": {
+                "actual": 12.5,
+                "simple": 0.5375
+              },
+              "opticalDepth": 0.01,
+              "color": "0x2d8fd6"
+            },
+            {
+              "type": "ring",
+              "name": "Main Ring",
+              "radius": {
+                "actual": 122.5,
+                "simple": 5.2675
+              },
+              "width": {
+                "actual": 6.5,
+                "simple": 0.2795
+              },
+              "thickness": {
+                "actual": 0.3,
+                "simple": 0.0129
+              },
+              "opticalDepth": 0.01,
+              "color": "0xc1440e"
+            },
+            {
+              "type": "ring",
+              "name": "Amalthea Gossamer Ring",
+              "radius": {
+                "actual": 129.0,
+                "simple": 5.547
+              },
+              "width": {
+                "actual": 53.0,
+                "simple": 2.279
+              },
+              "thickness": {
+                "actual": 2.0,
+                "simple": 0.086
+              },
+              "opticalDepth": 0.01,
+              "color": "0xc1440e"
+            },
+            {
+              "type": "ring",
+              "name": "Thebe Gossamer Ring",
+              "radius": {
+                "actual": 129.0,
+                "simple": 5.547
+              },
+              "width": {
+                "actual": 97.0,
+                "simple": 4.171
+              },
+              "thickness": {
+                "actual": 8.4,
+                "simple": 0.4032
+              },
+              "opticalDepth": 0.01,
+              "color": "0xc1440e"
+            }
           ]
         },
         {
@@ -2195,7 +2269,416 @@
             "ascNodeLong": 113.665,
             "perihelionArg": 339.392
           },
-          "satellites": []
+          "satellites": [],
+          "ringSystem": [
+            {
+              "type": "ring",
+              "name": "D Ring",
+              "radius": {
+                "actual": 66.9,
+                "simple": 3.2
+              },
+              "width": {
+                "actual": 7.5,
+                "simple": 0.36
+              },
+              "opticalDepth": 0.05,
+              "color": "0x655f45"
+            },
+            {
+              "type": "ring",
+              "name": "C Ring",
+              "radius": {
+                "actual": 74.658,
+                "simple": 3.584
+              },
+              "width": {
+                "actual": 17.5,
+                "simple": 0.84
+              },
+              "opticalDepth": 0.05,
+              "color": "0xd8ae6d",
+              "parts": [
+                {
+                  "type": "gap",
+                  "name": "Colombo Gap",
+                  "radius": {
+                    "actual": 77.87,
+                    "simple": 3.74
+                  },
+                  "width": {
+                    "actual": 0.15,
+                    "simple": 0.0072
+                  }
+                },
+                {
+                  "type": "ringlet",
+                  "name": "Titan Ringlet",
+                  "radius": {
+                    "actual": 77.87,
+                    "simple": 3.74
+                  },
+                  "width": {
+                    "actual": 0.025,
+                    "simple": 0.0012
+                  }
+                },
+                {
+                  "type": "gap",
+                  "name": "Maxwell Gap",
+                  "radius": {
+                    "actual": 87.491,
+                    "simple": 4.2
+                  },
+                  "width": {
+                    "actual": 0.27,
+                    "simple": 0.013
+                  }
+                },
+                {
+                  "type": "ringlet",
+                  "name": "Maxwell Ringlet",
+                  "radius": {
+                    "actual": 87.491,
+                    "simple": 4.2
+                  },
+                  "width": {
+                    "actual": 0.064,
+                    "simple": 0.003
+                  },
+                  "opticalDepth": 0.08,
+                  "color": "0x655f45"
+                },
+                {
+                  "type": "gap",
+                  "name": "Bond Gap",
+                  "radius": {
+                    "actual": 88.7,
+                    "simple": 4.2576
+                  },
+                  "width": {
+                    "actual": 0.03,
+                    "simple": 0.00144
+                  }
+                },
+                {
+                  "type": "ringlet",
+                  "name": "1.470Rs Ringlet",
+                  "radius": {
+                    "actual": 88.716,
+                    "simple": 4.2584
+                  },
+                  "width": {
+                    "actual": 0.016,
+                    "simple": 0.000768
+                  },
+                  "opticalDepth": 0.1,
+                  "color": "0x655f45"
+                },
+                {
+                  "type": "ringlet",
+                  "name": "1.495Rs Ringlet",
+                  "radius": {
+                    "actual": 90.171,
+                    "simple": 4.3282
+                  },
+                  "width": {
+                    "actual": 0.062,
+                    "simple": 0.002976
+                  },
+                  "opticalDepth": 0.12,
+                  "color": "0x655f45"
+                },
+                {
+                  "type": "gap",
+                  "name": "Dawes Gap",
+                  "radius": {
+                    "actual": 90.21,
+                    "simple": 4.33
+                  },
+                  "width": {
+                    "actual": 0.02,
+                    "simple": 0.00096
+                  }
+                }
+              ]
+            },
+            {
+              "type": "ring",
+              "name": "B Ring",
+              "radius": {
+                "actual": 92.0,
+                "simple": 4.416
+              },
+              "width": {
+                "actual": 25.5,
+                "simple": 1.224
+              },
+              "opticalDepth": 0.1,
+              "color": "0xffe1ab"
+            },
+            {
+              "type": "ring",
+              "name": "Cassini Division",
+              "radius": {
+                "actual": 117.58,
+                "simple": 5.644
+              },
+              "width": {
+                "actual": 4.7,
+                "simple": 0.2256
+              },
+              "opticalDepth": 0.1,
+              "color": "0x655f45",
+              "parts": [
+                {
+                  "type": "gap",
+                  "name": "Huygens Gap",
+                  "radius": {
+                    "actual": 117.68,
+                    "simple": 5.649
+                  },
+                  "width": {
+                    "actual": 0.3,
+                    "simple": 0.0144
+                  }
+                },
+                {
+                  "name": "Huygens Ringlet",
+                  "radius": {
+                    "actual": 117.848,
+                    "simple": 5.657
+                  },
+                  "width": {
+                    "actual": 0.017,
+                    "simple": 0.000816
+                  }
+                },
+                {
+                  "type": "gap",
+                  "name": "Herschel Gap",
+                  "radius": {
+                    "actual": 118.234,
+                    "simple": 5.675
+                  },
+                  "width": {
+                    "actual": 0.102,
+                    "simple": 0.004896
+                  }
+                },
+                {
+                  "type": "gap",
+                  "name": "Russell Gap",
+                  "radius": {
+                    "actual": 118.614,
+                    "simple": 5.693
+                  },
+                  "width": {
+                    "actual": 0.033,
+                    "simple": 0.001584
+                  }
+                },
+                {
+                  "type": "gap",
+                  "name": "Jeffreys Gap",
+                  "radius": {
+                    "actual": 118.950,
+                    "simple": 5.7096
+                  },
+                  "width": {
+                    "actual": 0.038,
+                    "simple": 0.001824
+                  }
+                },
+                {
+                  "type": "gap",
+                  "name": "Kuiper Gap",
+                  "radius": {
+                    "actual": 119.405,
+                    "simple": 5.7314
+                  },
+                  "width": {
+                    "actual": 0.003,
+                    "simple": 0.000144
+                  }
+                },
+                {
+                  "type": "gap",
+                  "name": "Laplace Gap",
+                  "radius": {
+                    "actual": 119.967,
+                    "simple": 5.7584
+                  },
+                  "width": {
+                    "actual": 0.238,
+                    "simple": 0.011424
+                  }
+                },
+                {
+                  "type": "gap",
+                  "name": "Bessel Gap",
+                  "radius": {
+                    "actual": 120.241,
+                    "simple": 5.7716
+                  },
+                  "width": {
+                    "actual": 0.01,
+                    "simple": 0.00048
+                  }
+                },
+                {
+                  "type": "gap",
+                  "name": "Barnard Gap",
+                  "radius": {
+                    "actual": 120.312,
+                    "simple": 5.775
+                  },
+                  "width": {
+                    "actual": 0.013,
+                    "simple": 0.000624
+                  }
+                }
+              ]
+            },
+            {
+              "type": "ring",
+              "name": "A Ring",
+              "radius": {
+                "actual": 122.17,
+                "simple": 5.864
+              },
+              "width": {
+                "actual": 14.6,
+                "simple": 0.7
+              },
+              "color": "0xdbb57c",
+              "opticalDepth": 0.8,
+              "parts": [
+                {
+                  "type": "gap",
+                  "name": "Encke Gap",
+                  "radius": {
+                    "actual": 133.589,
+                    "simple": 6.412
+                  },
+                  "width": {
+                    "actual": 0.325,
+                    "simple": 0.0156
+                  }
+                },
+                {
+                  "type": "gap",
+                  "name": "Keeler Gap",
+                  "radius": {
+                    "actual": 136.505,
+                    "simple": 6.55
+                  },
+                  "width": {
+                    "actual": 0.035,
+                    "simple": 0.00168
+                  }
+                }
+              ]
+            },
+            {
+              "type": "ring",
+              "name": "Roche Division",
+              "radius": {
+                "actual": 136.775,
+                "simple": 6.565
+              },
+              "width": {
+                "actual": 2.6,
+                "simple": 0.1248
+              },
+              "opticalDepth": 0.04,
+              "color": "0x655f45"
+            },
+            {
+              "type": "ring",
+              "name": "F Ring",
+              "radius": {
+                "actual": 140.180,
+                "simple": 6.7286
+              },
+              "width": {
+                "actual": 0.25,
+                "simple": 0.012
+              },
+              "opticalDepth": 0.1,
+              "color": "0xdbb57c"
+            },
+            {
+              "type": "ring",
+              "name": "Janus/Epimetheus Ring",
+              "radius": {
+                "actual": 149.0,
+                "simple": 7.152
+              },
+              "width": {
+                "actual": 5,
+                "simple": 0.24
+              },
+              "opticalDepth": 0.02,
+              "color": "0xb89c72"
+            },
+            {
+              "type": "ring",
+              "name": "G Ring",
+              "radius": {
+                "actual": 166.0,
+                "simple": 7.968
+              },
+              "width": {
+                "actual": 9,
+                "simple": 0.432
+              },
+              "opticalDepth": 0.015,
+              "color": "0xb89c72"
+            },
+            {
+              "type": "ring",
+              "name": "Pallene Ring",
+              "radius": {
+                "actual": 211.0,
+                "simple": 10.128
+              },
+              "width": {
+                "actual": 2.5,
+                "simple": 0.12
+              },
+              "opticalDepth": 0.013,
+              "color": "0xb89c72"
+            },
+            {
+              "type": "ring",
+              "name": "E Ring",
+              "radius": {
+                "actual": 180.0,
+                "simple": 8.64
+              },
+              "width": {
+                "actual": 300,
+                "simple": 14.4
+              },
+              "opticalDepth": 0.01,
+              "color": "0xb89c72"
+            },
+            {
+              "type": "ring",
+              "name": "Phoebe Ring",
+              "radius": {
+                "actual": 4000.0,
+                "simple": 16
+              },
+              "width": {
+                "actual": 9000.0,
+                "simple": 32
+              },
+              "opticalDepth": 0.008,
+              "color": "0xb89c72"
+            }
+          ]
         },
         {
           "type": "gas giant",

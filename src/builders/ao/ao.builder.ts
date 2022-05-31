@@ -8,27 +8,35 @@ import { BaseBuilder } from '../base.builder';
 import { LabelBuilder } from '../label.builder';
 import { AxesBuilder } from './axes.builder';
 import { OrbitBuilder } from './orbit.builder';
+import { RingsBuilder } from './rings.builder';
 
 export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
   private _orbitBuilder: OrbitBuilder;
   private _labelBuilder: LabelBuilder;
   private _axesBuilder: AxesBuilder;
+  private _ringsBuilder: RingsBuilder;
 
   constructor(scene: Scene) {
     super(scene);
     this._orbitBuilder = new OrbitBuilder(scene);
     this._labelBuilder = new LabelBuilder(scene);
     this._axesBuilder = new AxesBuilder(scene);
+    this._ringsBuilder = new RingsBuilder(scene);
   }
 
   public build(o: IAO, center?: THREE.Vector3) {
     const group = new THREE.Group();
     const obj = this.buildAO(o);
 
+    if (o.ringSystem) {
+      const rings = this._ringsBuilder.build(o.ringSystem);
+      obj.add(rings);
+    }
+
     group.add(obj);
 
     if (o.satellites) {
-      o.satellites.map((s) => {
+      o.satellites.forEach((s) => {
         group.add(this.build(s, obj.position));
       });
     }
@@ -91,7 +99,7 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
     obj.rotation.y += o.axialTilt;
 
     if (o.rotationPeriod) {
-      this.scene.onTick((elapsed) => {
+      this.scene.onTick(() => {
         obj.rotation.z += o.speed;
       });
     }
