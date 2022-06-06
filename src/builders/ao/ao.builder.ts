@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-import { Constants } from '../../constants';
+import { Constants, LayerChannel } from '../../constants';
 import { AOType, IAO } from '../../models';
 import { Scene } from '../../scene';
 import { Converter } from '../../utils';
@@ -109,16 +109,16 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
 
   private buildSun(o: IAO) {
     const group = new THREE.Group();
-    const geo = new THREE.IcosahedronGeometry(o.radius.value, 32);
+    const geo = new THREE.IcosahedronBufferGeometry(o.radius.value, 32);
     const mat = new THREE.MeshBasicMaterial({ color: o.color || Constants.ao.defaultColor });
 
-    const light = new THREE.PointLight(o.color, o.radius.value, 10000000);
+    const light = new THREE.PointLight(0xffffff, o.radius.value, 1000, 1);
     light.castShadow = true;
-    light.power = Constants.sun.lightPower;
+    light.power = 20; // Constants.sun.lightPower;
     group.add(light);
 
     const sun = new THREE.Mesh(geo, mat);
-    sun.layers.enable(Constants.layers.bloom);
+    sun.layers.enable(LayerChannel.Bloom);
     group.add(sun);
 
     return group;
@@ -133,16 +133,17 @@ export class AOBuilder extends BaseBuilder<IAO, THREE.Group> {
   }
 
   private buildEquatorPlane(o: IAO) {
-    const geo = new THREE.CircleGeometry(o.diameter, 360, 0, 2 * Math.PI);
-    const mat = new THREE.MeshBasicMaterial({ color: 0x2d8fd6, side: THREE.DoubleSide, opacity: 0.5, transparent: true });
+    const geo = new THREE.CircleBufferGeometry(o.diameter, 360, 0, 2 * Math.PI);
+    const mat = new THREE.MeshBasicMaterial({ color: 0xcde9e5, side: THREE.DoubleSide, opacity: 0.5, transparent: true });
     const obj = new THREE.Mesh(geo, mat);
     obj.rotation.set(0, 0, 0);
+    obj.layers.set(LayerChannel.Planes);
     return obj;
   }
 
   private getDefaultObject(o: IAO) {
     const group = new THREE.Group();
-    const geo = new THREE.SphereGeometry(o.radius.value, 32, 32);
+    const geo = new THREE.SphereBufferGeometry(o.radius.value, 32, 32);
     const mat = new THREE[Constants.mode === 'actual' ? 'MeshStandardMaterial' : 'MeshBasicMaterial']({
       color: o.color || Constants.ao.defaultColor,
     });

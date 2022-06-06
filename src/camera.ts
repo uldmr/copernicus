@@ -1,6 +1,6 @@
-import { PerspectiveCamera } from 'three';
+import { PerspectiveCamera, PointLight } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { Constants } from './constants';
+import { Constants, Layers } from './constants';
 
 import { Window } from './utils';
 
@@ -40,6 +40,22 @@ export class Camera {
   private initCamera() {
     this._cam = new PerspectiveCamera(Constants.camera.fov, Window.aspect, Constants.camera.near, Constants.camera.far);
     this._cam.position.set(Constants.camera.defaultPos.x, Constants.camera.defaultPos.y, Constants.camera.defaultPos.z);
+
+    this.initLayers();
+  }
+
+  private initLayers() {
+    const light = new PointLight(0xffffff, 1);
+    Layers.forEach((l) => {
+      if (l.enabled) {
+        this._cam.layers.enable(l.channel);
+        light.layers.enable(l.channel);
+      } else {
+        this._cam.layers.disable(l.channel);
+        light.layers.disable(l.channel);
+      }
+    });
+    this._cam.add(light);
   }
 
   private initControls(domElement?: HTMLElement) {

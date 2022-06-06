@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import { Constants } from '../../constants';
 
+import { Constants, LayerChannel } from '../../constants';
 import { IAO } from '../../models';
 import { BaseBuilder } from '../base.builder';
 
@@ -45,6 +45,10 @@ export class AxesBuilder extends BaseBuilder<IAO, THREE.Group> {
     const geo = new THREE.BufferGeometry().setFromPoints(points);
     const mat = new THREE.LineBasicMaterial({ color, side: THREE.DoubleSide, opacity: 0.5, transparent: true });
 
-    return new THREE.Line(geo, mat);
+    const obj = new THREE.Line(geo, mat);
+
+    obj.layers.set(LayerChannel.Axes);
+
+    return obj;
   }
 }

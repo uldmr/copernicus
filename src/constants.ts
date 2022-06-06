@@ -1,5 +1,14 @@
 import * as THREE from 'three';
 
+import { ILayer } from './models';
+
+export enum LayerChannel {
+  Bloom = 0,
+  Orbits = 1,
+  Axes = 2,
+  Planes = 3,
+}
+
 const Modes = {
   actual: {
     mode: 'actual',
@@ -47,18 +56,21 @@ const Modes = {
   },
 };
 
+export const Layers: ILayer[] = [
+  { channel: LayerChannel.Orbits, title: 'Orbits', enabled: true },
+  { channel: LayerChannel.Axes, title: 'Axes' },
+  { channel: LayerChannel.Planes, title: 'Planes' },
+];
+
 export const Constants = {
   scene: {
     center: new THREE.Vector3(0, 0, 0),
     bg: '/textures/stars.jpg',
   },
-  layers: {
-    bloom: 1,
-  },
   ao: {
     defaultColor: 0x7d827e,
     orbit: {
-      color: 0xffffff,
+      color: 0xa7dce9,
       /** Orbital inclination (deg) */
       inclination: 90,
     },

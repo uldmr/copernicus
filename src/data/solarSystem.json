@@ -2649,34 +2649,6 @@
               },
               "opticalDepth": 0.013,
               "color": "0xb89c72"
-            },
-            {
-              "type": "ring",
-              "name": "E Ring",
-              "radius": {
-                "actual": 180.0,
-                "simple": 8.64
-              },
-              "width": {
-                "actual": 300,
-                "simple": 14.4
-              },
-              "opticalDepth": 0.01,
-              "color": "0xb89c72"
-            },
-            {
-              "type": "ring",
-              "name": "Phoebe Ring",
-              "radius": {
-                "actual": 4000.0,
-                "simple": 16
-              },
-              "width": {
-                "actual": 9000.0,
-                "simple": 32
-              },
-              "opticalDepth": 0.008,
-              "color": "0xb89c72"
             }
           ]
         },

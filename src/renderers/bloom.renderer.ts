@@ -3,7 +3,8 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
-import { Constants } from '../constants';
+
+import { LayerChannel } from '../constants';
 import { Window } from '../utils';
 import { BaseRenderer } from './base.renderer';
 
@@ -44,7 +45,7 @@ export class BloomRenderer extends BaseRenderer<EffectComposer> {
   constructor(renderer: WebGLRenderer, scene: Scene, camera: Camera) {
     super();
     this._renderPass = new RenderPass(scene, camera);
-    this._bloomLayer.set(Constants.layers.bloom);
+    this._bloomLayer.set(LayerChannel.Bloom);
     this.initBloomPass();
     this.initBloomComposer(renderer);
     this.initFinalPass();

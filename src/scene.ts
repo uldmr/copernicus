@@ -19,6 +19,7 @@ export class Scene {
 
   constructor() {
     this._scene = new THREE.Scene();
+    this._scene.background = new THREE.Color(0xffffff);
     this._env = new Environment(this._scene);
     this._raycaster = new THREE.Raycaster();
     this._pointer = new THREE.Vector2(0, 0);
@@ -56,6 +57,10 @@ export class Scene {
     return this._env.camera;
   }
 
+  public get layers() {
+    return this.camera.instance.layers;
+  }
+
   // private methods
 
   private buildDeepSpace() {
@@ -79,7 +84,7 @@ export class Scene {
       handler(elapsed);
     });
 
-    this._raycaster.setFromCamera(this._pointer, this.camera.instance);
+    // this._raycaster.setFromCamera(this._pointer, this.camera.instance);
 
     // const intersects = this._raycaster.intersectObjects(this._scene.children, true);
 

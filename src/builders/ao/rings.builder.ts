@@ -53,14 +53,15 @@ export class RingsBuilder extends BaseBuilder<IRing[], THREE.Group> {
   }
 
   private buildRingByParams(radius: number, width: number, color: number, opticalDepth: number) {
-    const geo = new THREE.RingGeometry(radius, radius + width, 360, 360, 2 * Math.PI, 2 * Math.PI);
-    const mat = new THREE.MeshBasicMaterial({
+    const geo = new THREE.RingBufferGeometry(radius, radius + width, 360, 360, 2 * Math.PI, 2 * Math.PI);
+    const mat = new THREE.MeshStandardMaterial({
       color: color,
       side: THREE.DoubleSide,
       opacity: color ? opticalDepth * 10 : 0,
       transparent: true,
-    });
+    });    
     const obj = new THREE.Mesh(geo, mat);
+    obj.receiveShadow = true;
     return obj;
   }
 }

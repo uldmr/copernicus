@@ -11,6 +11,8 @@ export class MainRenderer extends BaseRenderer<WebGLRenderer> {
       antialias: true,
     });
     this._renderer.setPixelRatio(Window.dpr);
+    this._renderer.shadowMap.enabled = true;
+    this._renderer.shadowMap.autoUpdate = true;
     if (Constants.mode === 'actual') {
       this._renderer.toneMapping = ReinhardToneMapping;
     }

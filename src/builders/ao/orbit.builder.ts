@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-import { Constants } from '../../constants';
+import { Constants, LayerChannel } from '../../constants';
 import { IOrbit } from '../../models';
 import { BaseBuilder } from '../base.builder';
 
@@ -10,6 +10,7 @@ export class OrbitBuilder extends BaseBuilder<IOrbit, THREE.Line> {
     const mat = new THREE.LineBasicMaterial({ color: Constants.ao.orbit.color, side: THREE.DoubleSide, transparent: true, opacity: 0.2 });
     const orbit = new THREE.Line(geo, mat);
     orbit.rotation.set(THREE.MathUtils.degToRad(Constants.ao.orbit.inclination), 0, 0);
+    orbit.layers.set(LayerChannel.Orbits);
     return orbit;
   }
 
